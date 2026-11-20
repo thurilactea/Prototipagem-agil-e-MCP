@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Entrar · NexaDesk</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="login">
+    <section class="login__brand">
+      <div class="logo"><span class="logo__mark"><i data-lucide="headphones"></i></span><span>NexaDesk</span></div>
+      <div class="login__message">
+        <h1 class="h1">Suporte de TI organizado, do chamado à solução.</h1>
+        <p class="muted">Registre, acompanhe e resolva solicitações técnicas em um só lugar, com indicadores em tempo real para toda a equipe.</p>
+        <ul class="benefits">
+          <li><i data-lucide="circle-check"></i>Abertura de chamados em segundos</li>
+          <li><i data-lucide="circle-check"></i>Prioridades e status com cores claras</li>
+          <li><i data-lucide="circle-check"></i>Relatórios por técnico, período e prioridade</li>
+        </ul>
+      </div>
+      <p class="cap muted">© 2026 NexaDesk · Projeto acadêmico</p>
+    </section>
+
+    <main class="login__area">
+      <form class="card login__card" id="login-form" novalidate>
+        <div class="page-header__titles">
+          <h2 class="h2">Bem-vindo de volta</h2>
+          <p class="muted">Entre com seu e-mail e senha para continuar</p>
+        </div>
+
+        <div class="note note--error" id="login-error" hidden><i data-lucide="circle-alert"></i><span></span></div>
+
+        <div class="field">
+          <label for="email">E-mail</label>
+          <div class="control"><i data-lucide="mail"></i><input id="email" name="email" type="email" autocomplete="username" placeholder="seu.email@empresa.com"></div>
+        </div>
+        <div class="field">
+          <label for="senha">Senha</label>
+          <div class="control">
+            <i data-lucide="lock"></i><input id="senha" name="senha" type="password" autocomplete="current-password" placeholder="••••••••">
+            <button type="button" class="toggle-pass" id="toggle-pass" aria-label="Mostrar senha"><i data-lucide="eye"></i></button>
+          </div>
+        </div>
+
+        <div class="login__options">
+          <label class="check"><input type="checkbox" id="remember"> Lembrar-me</label>
+          <button type="button" class="link" id="forgot">Esqueci minha senha</button>
+        </div>
+
+        <button class="btn btn--primary btn--block" type="submit">Entrar</button>
+
+        <div class="demo">
+          <div class="note note--info"><i data-lucide="info"></i><span>Acesso demonstrativo: senha <b>123456</b> para todos os perfis.</span></div>
+          <div class="demo__chips">
+            <button type="button" class="chip" data-demo="ana.martins@nexadesk.com">Administrador</button>
+            <button type="button" class="chip" data-demo="carlos.lima@nexadesk.com">Técnico</button>
+            <button type="button" class="chip" data-demo="bruno.reis@nexadesk.com">Solicitante</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="js/vendor/lucide.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages/login.js"></script>
+</body>
+</html>
